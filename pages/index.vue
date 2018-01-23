@@ -1,14 +1,15 @@
 <template>
-  <section class="index__background">
+  <section class="index">
     <div class="index__container">
-      <h1>
-        <nuxt-link class="index__name" to="/">Ryan Wang</nuxt-link>
-      </h1>
-      <h2 class="index__title">
-        Ryan is a front-end web developer.
+      <nav>
+        <nuxt-link class="index__home" to="/">Home</nuxt-link>
+      </nav>
+      <h2 class="index__title" :class="{ transparency: titleIsVisible }">
+        Ryan Wang
+        <span class="index__variable-title" :class="{ transparency: titleIsVisible, isVisible: variableTitleIsVisible }">{{statusText}}</span>
       </h2>
       <p class="index__status">
-        <span class="index__email">Available</span> to join a kickass front-end team.
+        <a href="mailto:qwang1993@gmail.com" class="index__email">Available</a> to join a kickass front-end team.
       </p>
 
       <nav>
@@ -20,13 +21,13 @@
             <a>Resume</a>
           </li>
           <li class="index__link">
-            <a>Medium</a>
+            <a href="https://medium.com/@ryancommits" target="_blank">Medium</a>
           </li>
           <li class="index__link">
-            <a>Github</a>
+            <a href="https://github.com/RyanCommits/" target="_blank">Github</a>
           </li>
           <li class="index__link">
-            <a>LinkedIn</a>
+            <a href="https://www.linkedin.com/in/ryancommits/" target="_blank">LinkedIn</a>
           </li>
         </ul>
       </nav>
@@ -40,12 +41,47 @@ import AppLogo from '~/components/AppLogo.vue'
 export default {
   components: {
     AppLogo
+  },
+  data() {
+    return {
+      character: 0,
+      statusText: '',
+      status: 'is a front-end web developer.',
+      typeSpeed: 50,
+      titleIsVisible: false,
+      variableTitleIsVisible: false
+    }
+  },
+  mounted() {
+    this.titleTransition();
+  },
+  methods: {
+    typer(i) {
+      setTimeout(() => {
+        this.statusText += this.status.charAt(i);
+      }, 50*i)
+    },
+    titleTransition() {
+      // make name visible
+      this.titleIsVisible = true;
+
+      // make variable text visible and start typing after X seconds
+
+      setTimeout(() => {
+        for (let i = 0; i < this.status.length; i++) {
+          this.typer(i);
+        }
+        this.variableTitleIsVisible = true;
+      }, 1500)
+    }
   }
 }
 </script>
 
 <style>
-.index__background {
+
+/* Main styles */
+.index {
   min-width: 100vw;
   min-height: 100vh;
   background-color: #181818;
@@ -56,23 +92,30 @@ export default {
 .index__container {
   width: 600px;
 }
-.index__name {
-  text-decoration: none;
+.index__home {
   color: white;
   font-size: 20px;
 }
 .index__title {
+  opacity: 0;
   color: white;
   font-size: 50px;
   margin: 50px 0px;
+  line-height: 1.35;
+  min-height: 146px;
+  -o-transition: 6.5s;
+  -ms-transition: 6.5s;
+  -moz-transition: 6.5s;
+  -webkit-transition: 6.5s;
+  transition: 6.5s;
+}
+.index__variable-title {
+  visibility: hidden;
 }
 .index__status {
   color: white;
   font-size: 25px;
   margin-bottom: 60px;
-}
-.index__email {
-  color: #6d6d6d;
 }
 .index__list {
   list-style: none;
@@ -83,15 +126,28 @@ export default {
   color: #6d6d6d;
   margin-right: 10px;
 }
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
+.transparency {
+  opacity: 1;
 }
-
-.links {
-  padding-top: 15px;
+.isVisible {
+  visibility: visible;
+}
+/* Link styles */
+.index a {
+  text-decoration: none;
+}
+.index a:link {
+  color: #6d6d6d;
+}
+.index a:visited {
+  color: #6d6d6d;
+}
+.index a:hover {
+  color: #d9d9d9;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
 }
 </style>
