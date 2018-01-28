@@ -27,7 +27,6 @@ export default {
   font-size: 20px;
   color: #999999;
   margin-bottom: 60px;
-
 }
 .about__body {
   color: #333333;

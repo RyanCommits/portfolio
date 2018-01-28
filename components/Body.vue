@@ -1,17 +1,20 @@
 <template>
   <div class="body">
     <div class="body__container">
-      <about :text='aboutText'/>
+      <about class="body__about" :text='aboutText'/>
+      <experience/>
     </div>
   </div>
 </template>
 
 <script>
-import About from '~/components/about.vue';
+import About from '~/components/About.vue';
+import Experience from '~/components/experience/Experience.vue';
 
 export default {
   components: {
-    About
+    About,
+    Experience
   },
   data() {
     return {
@@ -29,14 +32,15 @@ export default {
   z-index: 1;
   display: flex;
   justify-content: center;
-  height: 1000px;
   background-color: #ebebeb;
   padding: 70px;
 }
 .body__container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   width: 700px;
-  height: 500px;
+}
+.body__about {
+  margin-bottom: 200px;
 }
 </style>
