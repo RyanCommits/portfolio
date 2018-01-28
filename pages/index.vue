@@ -1,17 +1,17 @@
 <template>
   <section class="index">
     <main-header/>
-    <about/>
+    <main-body/>
   </section>
 </template>
 
 <script>
-import About from '~/components/About.vue';
+import MainBody from '~/components/Body.vue';
 import MainHeader from '~/components/Header.vue';
 
 export default {
   components: {
-    About,
+    MainBody,
     MainHeader
   },
   data() {

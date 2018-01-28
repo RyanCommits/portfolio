@@ -5,10 +5,10 @@
         <nuxt-link to="/">Home</nuxt-link>
       </nav>
       <transition name="header__fade" @after-enter="titleTransition">
-        <h2 v-if="titleIsVisible" class="header__title">
+        <h1 v-if="titleIsVisible" class="header__title">
           <span >Ryan Wang </span>
           <span class="header__variable-title">{{statusText}}</span>
-        </h2>
+        </h1>
       </transition>
       <p class="header__status" :class="{ header__visible: bodyIsVisible }">
         <a href="mailto:qwang1993@gmail.com" class="header__email">Available</a> to join a kickass front-end team.
@@ -72,7 +72,6 @@ export default {
 
 <style>
 .header {
-  min-width: 100vw;
   min-height: 100vh;
   /* this height is needed for IE browsers */
   height:100px;
