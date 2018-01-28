@@ -2,7 +2,8 @@
   <div class="body">
     <div class="body__container">
       <about class="body__about" :text='aboutText'/>
-      <experience/>
+      <experience class="body__experience"/>
+      <education/>
     </div>
   </div>
 </template>
@@ -10,11 +11,13 @@
 <script>
 import About from '~/components/About.vue';
 import Experience from '~/components/experience/Experience.vue';
+import Education from '~/components/education/Education.vue';
 
 export default {
   components: {
     About,
-    Experience
+    Experience,
+    Education
   },
   data() {
     return {
@@ -40,7 +43,7 @@ export default {
   flex-direction: column;
   width: 700px;
 }
-.body__about {
+.body__about, .body__experience {
   margin-bottom: 200px;
 }
 </style>
