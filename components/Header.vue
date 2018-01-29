@@ -2,7 +2,11 @@
   <div class="header">
     <div class="header__container">
       <nav class="header__home" :class="{ header__visible: bodyIsVisible }">
-        <nuxt-link to="/">Home</nuxt-link>
+        <ul class="header__nav">
+          <li>Home</li>
+          <li @click="scrollToExperience">Experience</li>
+          <li>Education</li>
+        </ul>
       </nav>
       <transition name="header__fade" @after-enter="titleTransition">
         <h1 v-if="titleIsVisible" class="header__title">
@@ -65,6 +69,13 @@ export default {
       for (let i = 0; i < this.status.length; i++) {
         this.typer(i);
       }
+    },
+    scrollToExperience() {
+      document.querySelector('.experience').scrollIntoView({ 
+        behavior: "smooth", 
+        block: "end", 
+        inline: "nearest"
+      });
     }
   }
 }
@@ -92,7 +103,7 @@ export default {
 }
 .header__home {
   opacity: 0;
-  color: white;
+  color: #6d6d6d;
   font-size: 20px;
   transform: translateY(-45px);
   -o-transition:.9s;
@@ -100,6 +111,15 @@ export default {
   -moz-transition:.9s;
   -webkit-transition:.9s;
   transition:.9s;
+}
+.header__nav {
+  list-style: none;
+  padding: 0;
+  transition:.9s;
+}
+.header__nav li {
+  display: inline;
+  margin-right: 20px;
 }
 .header__title {
   color: white;
@@ -153,7 +173,7 @@ export default {
 .header a:visited {
   color: #6d6d6d;
 }
-.header a:hover {
+.header a:hover, .header li:hover{
   color: #d9d9d9;
   -o-transition:.5s;
   -ms-transition:.5s;
