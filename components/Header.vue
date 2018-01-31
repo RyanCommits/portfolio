@@ -1,41 +1,44 @@
 <template>
   <div class="header">
-    <div class="header__container">
-      <nav class="header__home" :class="{ header__visible: bodyIsVisible }">
-        <ul class="header__nav">
-          <li>Home</li>
-          <li @click="scrollToExperience">Experience</li>
-          <li>Education</li>
-        </ul>
-      </nav>
-      <transition name="header__fade" @after-enter="titleTransition">
-        <h1 v-if="titleIsVisible" class="header__title">
-          <span >Ryan Wang </span>
-          <span class="header__variable-title">{{statusText}}</span>
-        </h1>
-      </transition>
-      <p class="header__status" :class="{ header__visible: bodyIsVisible }">
-        <a href="mailto:qwang1993@gmail.com" class="header__email">Available</a> to join a kickass front-end team.
-      </p>
-
-      <nav>
-        <transition name="header__fade">
-          <ul class="header__list" :class="{ header__visible: bodyIsVisible }">
-            <li class="header__link">
-              <a>Resume</a>
-            </li>
-            <li class="header__link">
-              <a href="https://medium.com/@ryancommits" target="_blank">Medium</a>
-            </li>
-            <li class="header__link">
-              <a href="https://github.com/RyanCommits/" target="_blank">Github</a>
-            </li>
-            <li class="header__link">
-              <a href="https://www.linkedin.com/in/ryancommits/" target="_blank">LinkedIn</a>
-            </li>
+    <div class="header__table">
+      <div class="header__container">
+        <nav class="header__home" :class="{ header__visible: bodyIsVisible }">
+          <ul class="header__nav">
+            <li>Home</li>
+            <li @click="scrollTo('.about')">About</li>
+            <li @click="scrollTo('.experience')">Experience</li>
+            <li @click="scrollTo('.education')">Education</li>
           </ul>
+        </nav>
+        <transition name="header__fade" @after-enter="titleTransition">
+          <h1 v-if="titleIsVisible" class="header__title">
+            <span >Ryan Wang </span>
+            <span class="header__variable-title">{{statusText}}</span>
+          </h1>
         </transition>
-      </nav>
+        <p class="header__status" :class="{ header__visible: bodyIsVisible }">
+          <a href="mailto:qwang1993@gmail.com" class="header__email">Available</a> to join a kickass front-end team.
+        </p>
+
+        <nav>
+          <transition name="header__fade">
+            <ul class="header__list" :class="{ header__visible: bodyIsVisible }">
+              <li class="header__link">
+                <a href="https://drive.google.com/file/d/1nfcKZEfaypODsss0iQf51SajuTgJf-QU/view?usp=sharing" target="_blank">Resume</a>
+              </li>
+              <li class="header__link">
+                <a href="https://medium.com/@ryancommits" target="_blank">Medium</a>
+              </li>
+              <li class="header__link">
+                <a href="https://github.com/RyanCommits/" target="_blank">Github</a>
+              </li>
+              <li class="header__link">
+                <a href="https://www.linkedin.com/in/ryancommits/" target="_blank">LinkedIn</a>
+              </li>
+            </ul>
+          </transition>
+        </nav>
+      </div>
     </div>
   </div>
 </template>
@@ -70,12 +73,10 @@ export default {
         this.typer(i);
       }
     },
-    scrollToExperience() {
-      document.querySelector('.experience').scrollIntoView({ 
-        behavior: "smooth", 
-        block: "end", 
-        inline: "nearest"
-      });
+    scrollTo(location) {
+      $('html, body').animate({
+        scrollTop: $(location).offset().top
+      }, 1000)
     }
   }
 }
@@ -83,23 +84,19 @@ export default {
 
 <style>
 .header {
+  position: fixed;
   min-height: 100vh;
-  /* this height is needed for IE browsers */
-  height:100px;
-  background-color: #181818;
-  display: flex;
-  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox;      /* TWEENER - IE 10 */
-  display: -webkit-flex;     /* NEW - Chrome */
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  display: table;
+  width: 100%;
 }
 .header__container {
-  position: fixed;
+  margin: 0 auto;
   z-index: 0;
   width: 600px;
+}
+.header__table {
+  display: table-cell;
+  vertical-align: middle;
 }
 .header__home {
   opacity: 0;

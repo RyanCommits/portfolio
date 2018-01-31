@@ -34,6 +34,10 @@ export default {
   position: relative;
   z-index: 1;
   display: flex;
+  display: -webkit-box;     
+  display: -moz-box;         
+  display: -ms-flexbox;     
+  display: -webkit-flex;     
   justify-content: center;
   background-color: #ebebeb;
   padding: 70px;
