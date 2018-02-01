@@ -4,7 +4,7 @@
       <div class="header__container">
         <nav class="header__home" :class="{ header__visible: bodyIsVisible }">
           <ul class="header__nav">
-            <li>Home</li>
+            <li @click="scrollTo('body')">Home</li>
             <li @click="scrollTo('.about')">About</li>
             <li @click="scrollTo('.experience')">Experience</li>
             <li @click="scrollTo('.education')">Education</li>
@@ -75,7 +75,7 @@ export default {
     },
     scrollTo(location) {
       $('html, body').animate({
-        scrollTop: $(location).offset().top
+        scrollTop: $(location).offset().top - 150
       }, 1000)
     }
   }
@@ -177,6 +177,7 @@ export default {
   -moz-transition:.5s;
   -webkit-transition:.5s;
   transition:.5s;
+  cursor: pointer;
 }
 
 /* Vue transitions */

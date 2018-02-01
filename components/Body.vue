@@ -1,5 +1,6 @@
 <template>
   <div class="body">
+    <nav-bar/>
     <div class="body__container">
       <about class="body__about" :text='aboutText'/>
       <experience class="body__experience"/>
@@ -9,12 +10,14 @@
 </template>
 
 <script>
+import NavBar from '~/components/Nav.vue';
 import About from '~/components/About.vue';
 import Experience from '~/components/experience/Experience.vue';
 import Education from '~/components/education/Education.vue';
 
 export default {
   components: {
+    NavBar,
     About,
     Experience,
     Education
