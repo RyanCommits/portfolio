@@ -2,16 +2,19 @@
   <div class="education">
     <h2 class="education__title">
       <span>—&nbsp;</span>
-        EDUCATION
+      EDUCATION
       <span>&nbsp;—</span>
     </h2>
-    <school class="education__school" v-for="(school, index) in schools" :key="index"
-        :degree='school.degree'
-        :dates='school.dates'
-        :skills='school.skills'
-        :school='school.school'
-        :logoUrl='school.logoUrl'
-        :logoHeight='school.logoHeight'/>
+    <school 
+      class="education__school" 
+      v-for="(school, index) in schools" 
+      :key="index"
+      :degree="school.degree"
+      :dates="school.dates"
+      :skills="school.skills"
+      :school="school.school"
+      :logo-url="school.logoUrl"
+      :logo-height="school.logoHeight"/>
   </div>
 </template>
 

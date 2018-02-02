@@ -1,21 +1,54 @@
 <template>
   <div class="school">
-    <h3 class="school__degree">{{degree}}</h3>
-    <h4 class="school__skills" v-for="(skill, index) in skills" :key="index">
-      {{skill}}
+    <h3 class="school__degree">{{ degree }}</h3>
+    <h4 
+      class="school__skills" 
+      v-for="(skill, index) in skills" 
+      :key="index">
+      {{ skill }}
       <span v-if="index !== skills.length - 1">&nbsp;—&nbsp;</span>
     </h4>
-    <p class="school__dates">{{dates}}</p>
-    <p class="school__school">at {{school}}</p>
+    <p class="school__dates">{{ dates }}</p>
+    <p class="school__school">at {{ school }}</p>
     <div class="school__logo-container">
-      <img :src="logoUrl" :style="{ height: logoHeight + 'px' }" :alt="school">
+      <img 
+        :src="logoUrl" 
+        :style="{ height: logoHeight + 'px' }" 
+        :alt="school">
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  props: ['degree', 'dates', 'skills', 'school', 'logoUrl', 'logoHeight']
+  props: {
+    degree: {
+      type: String,
+      default: ''
+    },
+    dates: {
+      type: String,
+      default: ''
+    },
+    skills: {
+      type: Array,
+      default() {
+        return [];
+      }
+    },
+    school: {
+      type: String,
+      default: ''
+    },
+    logoUrl: {
+      type: String,
+      default: ''
+    },
+    logoHeight: {
+      type: Number,
+      default: 0
+    }
+  }
 }
 </script>
 

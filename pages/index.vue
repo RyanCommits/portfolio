@@ -1,7 +1,7 @@
 <template>
   <section class="index">
     <main-header/>
-    <div class="index__height"></div>
+    <div class="index__height"/>
     <main-body/>
   </section>
 </template>

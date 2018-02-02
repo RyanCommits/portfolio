@@ -13,14 +13,6 @@
 
 <script>
 export default {
-  methods: {
-    scrollTo(location) {
-      console.log($(location).offset())
-      $('html, body').animate({
-        scrollTop: $(location).offset().top - 150
-      }, 1000)
-    }
-  },
   mounted() {
     $('.nav').hide();
 
@@ -31,6 +23,14 @@ export default {
         $('.nav').fadeOut();
       }
     })
+  },
+  methods: {
+    scrollTo(location) {
+      console.log($(location).offset())
+      $('html, body').animate({
+        scrollTop: $(location).offset().top - 150
+      }, 1000)
+    }
   }
 }
 </script>

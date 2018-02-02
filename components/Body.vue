@@ -2,7 +2,9 @@
   <div class="body">
     <nav-bar/>
     <div class="body__container">
-      <about class="body__about" :text='aboutText'/>
+      <about 
+        class="body__about" 
+        :text="aboutText"/>
       <experience class="body__experience"/>
       <education/>
     </div>

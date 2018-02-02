@@ -2,7 +2,9 @@
   <div class="header">
     <div class="header__table">
       <div class="header__container">
-        <nav class="header__home" :class="{ header__visible: bodyIsVisible }">
+        <nav 
+          class="header__home" 
+          :class="{ header__visible: bodyIsVisible }">
           <ul class="header__nav">
             <li @click="scrollTo('body')">Home</li>
             <li @click="scrollTo('.about')">About</li>
@@ -10,30 +12,48 @@
             <li @click="scrollTo('.education')">Education</li>
           </ul>
         </nav>
-        <transition name="header__fade" @after-enter="titleTransition">
-          <h1 v-if="titleIsVisible" class="header__title">
+        <transition 
+          name="header__fade" 
+          @after-enter="titleTransition">
+          <h1 
+            v-if="titleIsVisible" 
+            class="header__title">
             <span >Ryan Wang </span>
-            <span class="header__variable-title">{{statusText}}</span>
+            <span class="header__variable-title">{{ statusText }}</span>
           </h1>
         </transition>
-        <p class="header__status" :class="{ header__visible: bodyIsVisible }">
-          <a href="mailto:qwang1993@gmail.com" class="header__email">Available</a> to join a kickass front-end team.
+        <p 
+          class="header__status" 
+          :class="{ header__visible: bodyIsVisible }">
+          <a 
+            href="mailto:qwang1993@gmail.com" 
+            class="header__email">Available</a> to join a kickass front-end team.
         </p>
 
         <nav>
           <transition name="header__fade">
-            <ul class="header__list" :class="{ header__visible: bodyIsVisible }">
+            <ul 
+              class="header__list" 
+              :class="{ header__visible: bodyIsVisible }">
               <li class="header__link">
-                <a href="https://drive.google.com/file/d/1nfcKZEfaypODsss0iQf51SajuTgJf-QU/view?usp=sharing" target="_blank">Resume</a>
+                <a 
+                  href="https://drive.google.com/file/d/1nfcKZEfaypODsss0iQf51SajuTgJf-QU/view?usp=sharing" 
+                  target="_blank">Resume</a>
               </li>
               <li class="header__link">
-                <a href="https://medium.com/@ryancommits" target="_blank">Medium</a>
+                <a 
+                  href="https://medium.com/@ryancommits" 
+                  target="_blank">Medium</a>
               </li>
               <li class="header__link">
-                <a href="https://github.com/RyanCommits/" target="_blank">Github</a>
+                <a
+                  href="https://github.com/RyanCommits/"
+                  target="_blank">Github</a>
               </li>
               <li class="header__link">
-                <a href="https://www.linkedin.com/in/ryancommits/" target="_blank">LinkedIn</a>
+                <a 
+                  href="https://www.linkedin.com/in/ryancommits/" 
+                  target="_blank">LinkedIn</a>
               </li>
             </ul>
           </transition>

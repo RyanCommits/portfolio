@@ -1,21 +1,54 @@
 <template>
   <div class="job">
-    <h3 class="job__role">{{role}}</h3>
-    <h4 class="job__skills" v-for="(skill, index) in skills" :key="index">
-      {{skill}}
+    <h3 class="job__role">{{ role }}</h3>
+    <h4 
+      class="job__skills" 
+      v-for="(skill, index) in skills" 
+      :key="index">
+      {{ skill }}
       <span v-if="index !== skills.length - 1">&nbsp;—&nbsp;</span>
     </h4>
-    <p class="job__dates">{{dates}}</p>
-    <p class="job__company">at {{company}}</p>
+    <p class="job__dates">{{ dates }}</p>
+    <p class="job__company">at {{ company }}</p>
     <div class="job__logo-container">
-      <img :src="logoUrl" :style="{ height: logoHeight + 'px' }" :alt="company">
+      <img 
+        :src="logoUrl" 
+        :style="{ height: logoHeight + 'px' }" 
+        :alt="company">
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  props: ['role', 'dates', 'skills', 'company', 'logoUrl', 'logoHeight']
+  props: {
+    role: {
+      type: String,
+      default: ''
+    },
+    dates: {
+      type: String,
+      default: ''
+    },
+    skills: {
+      type: Array,
+      default() {
+        return [];
+      }
+    },
+    company: {
+      type: String,
+      default: ''
+    },
+    logoUrl: {
+      type: String,
+      default: ''
+    },
+    logoHeight: {
+      type: Number,
+      default: 0
+    }
+  }
 }
 </script>
 

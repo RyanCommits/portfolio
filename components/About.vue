@@ -1,20 +1,25 @@
 <template>
   <div class="about">
-      <h2 class="about__title">
-        <span>—&nbsp;</span>
-          ABOUT ME
-        <span>&nbsp;—</span>
-      </h2>
+    <h2 class="about__title">
+      <span>—&nbsp;</span>
+      ABOUT ME
+      <span>&nbsp;—</span>
+    </h2>
 
-      <p class="about__body">
-        {{text}}
-      </p>
+    <p class="about__body">
+      {{ text }}
+    </p>
   </div>
 </template>
 
 <script>
 export default {
-  props: ['text']
+  props: {
+    text: {
+      type: String,
+      default: ''
+    }
+  }
 }
 </script>
 

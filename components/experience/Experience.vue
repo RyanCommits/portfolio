@@ -2,16 +2,19 @@
   <div class="experience">
     <h2 class="experience__title">
       <span>—&nbsp;</span>
-        EXPERIENCE
+      EXPERIENCE
       <span>&nbsp;—</span>
     </h2>
-    <job class="experience__job" v-for="(job, index) in jobs" :key="index"
-        :role='job.role'
-        :dates='job.dates'
-        :skills='job.skills'
-        :company='job.company'
-        :logoUrl='job.logoUrl'
-        :logoHeight='job.logoHeight'/>
+    <job 
+      class="experience__job"
+      v-for="(job, index) in jobs" 
+      :key="index"
+      :role="job.role"
+      :dates="job.dates"
+      :skills="job.skills"
+      :company="job.company"
+      :logo-url="job.logoUrl"
+      :logo-height="job.logoHeight"/>
   </div>
 </template>
 
