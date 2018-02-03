@@ -38,6 +38,7 @@ export default {
 .body{
   position: relative;
   z-index: 1;
+  top: -50px;
   display: flex;
   display: -webkit-box;     
   display: -moz-box;         

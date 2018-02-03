@@ -42,7 +42,7 @@ export default {
           logoHeight: 100
         },
         {
-          degree: 'Bachelor\'s degree',
+          degree: 'Bachelor\'s Degree',
           dates: 'August 2011 - June 2015',
           school: 'University of Miami',
           skills: [
