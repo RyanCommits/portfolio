@@ -65,11 +65,32 @@ export default {
 }
 .education__title {
   letter-spacing: 1px;
-  font-size: 20px;
+  font-size: 18px;
   color: #999999;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 .education__school {
-  margin-bottom: 130px;
+  margin-bottom: 100px;
+}
+.education__school:last-of-type {
+  margin-bottom: 0px;
+}
+@media only screen and (min-width: 550px) {
+  .education__title {
+    font-size: 19px;
+    margin-bottom: 50px;
+  }
+  .education__school {
+    margin-bottom: 115px;
+  }
+}
+@media only screen and (min-width: 750px) {
+  .education__title {
+    font-size: 20px;
+    margin-bottom: 60px;
+  }
+  .education__school {
+    margin-bottom: 130px;
+  }
 }
 </style>

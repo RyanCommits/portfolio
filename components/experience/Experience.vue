@@ -88,11 +88,32 @@ export default {
 }
 .experience__title {
   letter-spacing: 1px;
-  font-size: 20px;
+  font-size: 18px;
   color: #999999;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 .experience__job {
-  margin-bottom: 130px;
+  margin-bottom: 100px;
+}
+.experience__job:last-of-type {
+  margin-bottom: 0px;
+}
+@media only screen and (min-width: 550px) {
+  .experience__title {
+    font-size: 19px;
+    margin-bottom: 50px;
+  }
+  .experience__job {
+    margin-bottom: 115px;
+  }
+}
+@media only screen and (min-width: 750px) {
+  .experience__title {
+    font-size: 20px;
+    margin-bottom: 60px;
+  }
+  .experience__job {
+    margin-bottom: 130px;
+  }
 }
 </style>

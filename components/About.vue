@@ -29,13 +29,33 @@ export default {
 }
 .about__title {
   letter-spacing: 1px;
-  font-size: 20px;
+  font-size: 18px;
   color: #999999;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 .about__body {
   color: #333333;
-  font-size: 30px;
-  line-height: 48px;
+  font-size: 16px;
+  line-height: 36px;
+}
+@media only screen and (min-width: 550px) {
+  .about__title {
+    font-size: 19px;
+    margin-bottom: 60px;
+  }
+  .about__body {
+    font-size: 24px;
+    line-height: 44px;
+  }
+}
+@media only screen and (min-width: 750px) {
+  .about__title {
+    font-size: 20px;
+    margin-bottom: 60px;
+  }
+  .about__body {
+    font-size: 30px;
+    line-height: 48px;
+  }
 }
 </style>
