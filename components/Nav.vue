@@ -43,20 +43,22 @@ export default {
 	top: 0px;
   left: 0px;
   width: 100%;
-	height: 90px; 
+	height: 75px; 
   padding: 30px;
 }
 .nav__container {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
 }
 .nav__list {
   display: flex;
   justify-content: space-between;
   color: #6d6d6d;
-  width: 700px;
+  width: 400px;
   padding: 0;
+  font-size: 14px;
 }
 .nav__list li {
   display: inline;
@@ -69,5 +71,17 @@ export default {
   -webkit-transition:.5s;
   transition:.5s;
   cursor: pointer;
+}
+@media only screen and (min-width: 550px) {
+  .nav__list {
+    font-size: 18px;
+    width: 550px;
+  }
+}
+@media only screen and (min-width: 750px) {
+  .nav__list {
+    font-size: 20px;
+    width: 700px;
+  }
 }
 </style>

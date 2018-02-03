@@ -14,10 +14,6 @@ export default {
   components: {
     MainBody,
     MainHeader
-  },
-  data() {
-    return {
-    }
   }
 }
 </script>

@@ -112,16 +112,16 @@ export default {
 .header__container {
   margin: 0 auto;
   z-index: 0;
-  width: 600px;
+  width: 300px;
 }
 .header__table {
   display: table-cell;
   vertical-align: middle;
 }
 .header__home {
+  font-size: 16px;
   opacity: 0;
   color: #6d6d6d;
-  font-size: 20px;
   transform: translateY(-45px);
   -o-transition:.9s;
   -ms-transition:.9s;
@@ -140,7 +140,7 @@ export default {
 }
 .header__title {
   color: white;
-  font-size: 50px;
+  font-size: 35px;
   margin: 50px 0px;
   line-height: 1.35;
   min-height: 146px;
@@ -148,7 +148,7 @@ export default {
 .header__status {
   opacity: 0;
   color: white;
-  font-size: 25px;
+  font-size: 22px;
   transform: translateY(45px);
   margin-bottom: 60px;
   -o-transition:.9s;
@@ -161,6 +161,7 @@ export default {
   opacity: 0;
   list-style: none;
   padding: 0;
+  font-size: 16px;
   transform: translateY(45px);
   -o-transition:.9s;
   -ms-transition:.9s;
@@ -199,7 +200,37 @@ export default {
   transition:.5s;
   cursor: pointer;
 }
-
+@media only screen and (min-width: 550px) {
+  .header__home, .header__list {
+    font-size: 18px;
+  }
+  .header__status {
+    font-size: 22px;
+  }
+  .header__title {
+    font-size: 40px;
+  }
+  .header__container {
+    width: 450px;
+  }
+}
+@media only screen and (min-width: 750px) {
+  .header__container {
+    width: 600px;
+  }
+  .header__status {
+    font-size: 25px;
+  }
+  .header__title {
+    font-size: 50px;
+  }
+  .header__list {
+    font-size: 20px;
+  }
+  .header__home {
+    font-size: 20px;
+  }
+}
 /* Vue transitions */
 .header__fade-enter {
   opacity: 0;
