@@ -3,11 +3,11 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'portfolio',
+    title: 'Ryan Wang, Front-end Web Developer',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Ryan\'s portfolio' }
+      { hid: 'description', name: 'description', content: 'Ryan Wang is a front-end web developer from Miami, Florida.' }
     ],
     script: [
       { src: "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" }
