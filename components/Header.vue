@@ -182,9 +182,6 @@ export default {
   transform: translateY(0);
 }
 /* Link styles */
-.header a {
-  text-decoration: none;
-}
 .header a:link {
   color: #6d6d6d;
 }

@@ -15,7 +15,9 @@ html {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
 }
-
+a {
+  text-decoration: none;
+}
 *, *:before, *:after {
   box-sizing: border-box;
   margin: 0;

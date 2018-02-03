@@ -12,10 +12,10 @@
 </template>
 
 <script>
-import NavBar from '~/components/Nav.vue';
-import About from '~/components/About.vue';
-import Experience from '~/components/experience/Experience.vue';
-import Education from '~/components/education/Education.vue';
+import NavBar from '~/components/body/nav/Nav.vue';
+import About from '~/components/body/about/About.vue';
+import Experience from '~/components/body/experience/Experience.vue';
+import Education from '~/components/body/education/Education.vue';
 
 export default {
   components: {
@@ -38,7 +38,7 @@ export default {
 .body{
   position: relative;
   z-index: 1;
-  top: -50px;
+  top: -60px;
   display: flex;
   display: -webkit-box;     
   display: -moz-box;         
@@ -46,7 +46,7 @@ export default {
   display: -webkit-flex;     
   justify-content: center;
   background-color: #ebebeb;
-  padding: 70px;
+  padding: 140px;
 }
 .body__container {
   display: flex;

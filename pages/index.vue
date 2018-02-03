@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import MainBody from '~/components/Body.vue';
+import MainBody from '~/components/body/Body.vue';
 import MainHeader from '~/components/Header.vue';
 
 export default {

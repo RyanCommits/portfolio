@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import Job from '~/components/experience/Job.vue';
+import Job from '~/components/body/experience/Job.vue';
 
 export default {
   components: {

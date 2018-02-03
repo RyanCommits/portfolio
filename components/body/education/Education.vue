@@ -5,25 +5,37 @@
       EDUCATION
       <span>&nbsp;—</span>
     </h2>
-    <school 
-      class="education__school" 
+    <div 
+      class="education__school"
       v-for="(school, index) in schools" 
-      :key="index"
-      :degree="school.degree"
-      :dates="school.dates"
-      :skills="school.skills"
-      :school="school.school"
-      :logo-url="school.logoUrl"
-      :logo-height="school.logoHeight"/>
+      :key="index">
+      <school  
+        :degree="school.degree"
+        :dates="school.dates"
+        :skills="school.skills"
+        :school="school.school"
+        :logo-url="school.logoUrl"
+        :logo-height="school.logoHeight"/>
+      <recommendation 
+        class="education__recommendation"
+        v-if="school.recommendation"
+        :name="school.recommendation.name"
+        :title="school.recommendation.title"
+        :company="school.recommendation.company"
+        :profile-url="school.recommendation.profileUrl"
+        :recommendation="school.recommendation.recommendation"/>
+    </div>
   </div>
 </template>
 
 <script>
-import school from '~/components/education/School.vue';
+import school from '~/components/body/education/School.vue';
+import recommendation from '~/components/body/recommendation/Recommendation.vue';
 
 export default {
   components: {
-    school
+    school,
+    recommendation
   },
   data() {
     return {
@@ -39,7 +51,15 @@ export default {
           ],
           school: 'Ironhack',
           logoUrl: '/logos/ironhack.png',
-          logoHeight: 100
+          logoHeight: 100,
+          recommendation: {
+            name: 'Daniel Brito',
+            profileUrl: '/headshots/daniel-brito.jpg',
+            title: 'Placements Manager',
+            company: 'Ironhack',
+            recommendation: `Ryan is a person with an extremely strong work ethic and driving for 
+              results constantly. He sees and can address everything from the big picture to the details.`
+          }
         },
         {
           degree: 'Bachelor\'s Degree',
@@ -75,6 +95,9 @@ export default {
 .education__school:last-of-type {
   margin-bottom: 0px;
 }
+.education__recommendation {
+  margin-top: 55px;
+}
 @media only screen and (min-width: 550px) {
   .education__title {
     font-size: 19px;
@@ -82,6 +105,9 @@ export default {
   }
   .education__school {
     margin-bottom: 115px;
+  }
+  .education__recommendation {
+    margin-top: 75px;
   }
 }
 @media only screen and (min-width: 750px) {
