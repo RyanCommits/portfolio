@@ -18,7 +18,7 @@
       <q class="recommendation__recommendation">
         {{ recommendation }}
       </q>
-      <a class="recommendation__more">Read More ></a>
+      <!-- <a class="recommendation__more">Read More ></a> -->
     </div>
   </div>
 </template>
