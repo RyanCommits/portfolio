@@ -8,7 +8,7 @@ module.exports = {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Ryan Wang is a front-end web developer from Miami, Florida.' },
-      { property: 'og:image', content: '/web-preview.png'},
+      { property: 'og:image', content: 'http://ryancommits.com/web-preview.png'},
       { property: 'og:title', content: 'Ryan is a Front-End Web Developer'},
       { property: 'og:description', content: 'Check out Ryan\'s full profile'}
     ],
