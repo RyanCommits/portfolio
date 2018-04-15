@@ -5,20 +5,18 @@
       EDUCATION
       <span>&nbsp;—</span>
     </h2>
-    <div 
+    <school  
       v-for="(school, index) in schools" 
-      :key="index">
-      <school  
-        :degree="school.degree"
-        :dates="school.dates"
-        :skills="school.skills"
-        :school="school.school"
-        :logo-url="school.logoUrl"
-        :logo-height="school.logoHeight"
-        :recommendation="school.recommendation"
-        class="education__school"
-      />
-    </div>
+      :key="index"
+      :degree="school.degree"
+      :dates="school.dates"
+      :skills="school.skills"
+      :school="school.school"
+      :logo-url="school.logoUrl"
+      :logo-height="school.logoHeight"
+      :recommendation="school.recommendation"
+      class="education__school"
+    />
   </div>
 </template>
 

@@ -6,7 +6,8 @@
         :text="aboutText"
         class="body__about"/>
       <experience class="body__experience"/>
-      <education/>
+      <education class="body__education"/>
+      <awards/>
     </div>
   </div>
 </template>
@@ -16,13 +17,15 @@ import NavBar from '~/components/body/nav/Nav.vue';
 import About from '~/components/body/about/About.vue';
 import Experience from '~/components/body/experience/Experience.vue';
 import Education from '~/components/body/education/Education.vue';
+import Awards from '~/components/body/awards/Awards.vue';
 
 export default {
   components: {
     NavBar,
     About,
     Experience,
-    Education
+    Education,
+    Awards
   },
   data() {
     return {
@@ -52,17 +55,17 @@ export default {
   flex-direction: column;
   width: 700px;
 }
-.body__about, .body__experience {
-  margin-bottom: 50px;
+.body__about, .body__experience, .body__education {
+  margin-bottom: 30px;
 }
 @media only screen and (min-width: 550px) {
-  .body__about, .body__experience {
-    margin-bottom: 80px;
+  .body__about, .body__experience, .body__education {
+    margin-bottom: 60px;
   }
 }
 @media only screen and (min-width: 750px) {
-  .body__about, .body__experience {
-    margin-bottom: 130px;
+  .body__about, .body__experience, .body__education {
+    margin-bottom: 100px;
   }
 }
 </style>
