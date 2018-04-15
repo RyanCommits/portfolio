@@ -26,9 +26,8 @@ export default {
   },
   data() {
     return {
-      aboutText: 'I fell in love with JavaScript at the best coding bootcamp in Miami — Ironhack.\
-                  My passion is working with the best developers and designers around\
-                  to write elegant, scalable code and build remarkable user experiences.'
+      aboutText: 'I\'m a Front-end Web Specialist developing myself into a Full-Stack Engineer.\
+                  You\'ll find me building modern web applications with the latest JavaScript technologies.'
     }
   }
 }

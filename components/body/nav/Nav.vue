@@ -51,6 +51,7 @@ export default {
   justify-content: center;
   align-items: center;
   height: 100%;
+  padding: 0 15px;
 }
 .nav__list {
   display: flex;

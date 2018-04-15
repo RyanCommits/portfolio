@@ -29,6 +29,19 @@ export default {
     return {
       jobs: [
         {
+          role: 'Software Developer',
+          dates: 'February 2018 - Present',
+          skills: [
+            'React/Redux', 
+            'Laravel',
+            'MySQL'
+          ],
+          company: 'Nebular Agency',
+          logoUrl: '/logos/nebular-logo.png',
+          logoHeight: 110,
+          recommendation: {}
+        },
+        {
           role: 'Front-end Web Developer',
           dates: 'November 2017 to January 2018',
           skills: [

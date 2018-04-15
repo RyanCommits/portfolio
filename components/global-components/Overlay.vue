@@ -86,6 +86,7 @@ export default {
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin: 15px;
 }
 .overlay__profile {
   border-radius: 50%;
