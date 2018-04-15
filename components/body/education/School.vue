@@ -1,30 +1,41 @@
 <template>
   <div class="school">
-    <h3 class="school__degree">{{ degree }}</h3>
-    <div class="school__skills-container">
-      <h4 
-        class="school__skills" 
-        v-for="(skill, index) in skills" 
-        :key="index">
-        {{ skill }}
-        <span 
-          class="school__hyphen"
-          v-if="index !== skills.length - 1">&nbsp;—&nbsp;</span>
-      </h4>
+    <div class="school__wrapper">
+      <h3 class="school__degree">{{ degree }}</h3>
+      <div class="school__skills-container">
+        <h4 
+          class="school__skills" 
+          v-for="(skill, index) in skills" 
+          :key="index">
+          {{ skill }}
+          <span 
+            class="school__hyphen"
+            v-if="index !== skills.length - 1">&nbsp;—&nbsp;</span>
+        </h4>
+      </div>
+      <p class="school__dates">{{ dates }}</p>
+      <p class="school__school">at {{ school }}</p>
+      <div class="school__logo-container">
+        <img 
+          :src="logoUrl" 
+          :style="{ height: logoHeight + 'px' }" 
+          :alt="school">
+      </div>
     </div>
-    <p class="school__dates">{{ dates }}</p>
-    <p class="school__school">at {{ school }}</p>
-    <div class="school__logo-container">
-      <img 
-        :src="logoUrl" 
-        :style="{ height: logoHeight + 'px' }" 
-        :alt="school">
-    </div>
+    <overlay 
+      class="school__overlay"
+      v-if="recommendation.text"
+      :recommendation="recommendation"/>
   </div>
 </template>
 
 <script>
+import Overlay from '~/components/global-components/Overlay.vue';
+
 export default {
+  components: {
+    Overlay
+  },
   props: {
     degree: {
       type: String,
@@ -51,12 +62,21 @@ export default {
     logoHeight: {
       type: Number,
       default: 0
+    },
+    recommendation: {
+      type: Object,
+      default() {
+        return {};
+      }
     }
   }
 }
 </script>
 
 <style>
+.school {
+  padding: 40px 20px;
+}
 .school__degree {
   font-size: 36px;
   color: #242424;
@@ -82,6 +102,10 @@ export default {
 }
 .school__logo-container {
   margin-top: 30px;
+}
+.school:hover > .school__overlay {
+  width: 100%;
+  left: 0;
 }
 @media only screen and (min-width: 550px) {
   .school__degree {

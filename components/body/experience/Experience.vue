@@ -38,7 +38,8 @@ export default {
           ],
           company: 'Wrecking Ball Studio + Labs',
           logoUrl: '/logos/wreckingball.png',
-          logoHeight: 110
+          logoHeight: 110,
+          recommendation: {}
         },
         {
           role: 'Founder',
@@ -50,7 +51,8 @@ export default {
             'Event Management'
           ],
           logoUrl: '/logos/speakup.png',
-          logoHeight: 110
+          logoHeight: 110,
+          recommendation: {}
         },
         {
           role: 'Inside Sales Specialist',
@@ -62,7 +64,8 @@ export default {
           ],
           company: 'HealthSnap Solutions',
           logoUrl: '/logos/healthsnap.png',
-          logoHeight: 60
+          logoHeight: 60,
+          recommendation: {}
         },
         {
           role: 'Program Coordinator',
@@ -74,7 +77,8 @@ export default {
           ],
           company: 'University of Miami, Miller School of Medicine',
           logoUrl: '/logos/university.png',
-          logoHeight: 60
+          logoHeight: 60,
+          recommendation: {}
         }
       ]
     }
@@ -93,7 +97,8 @@ export default {
   margin-bottom: 40px;
 }
 .experience__job {
-  margin-bottom: 100px;
+  position: relative;
+  margin-bottom: 50px;
 }
 .experience__job:last-of-type {
   margin-bottom: 0px;
@@ -101,19 +106,19 @@ export default {
 @media only screen and (min-width: 550px) {
   .experience__title {
     font-size: 19px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
   .experience__job {
-    margin-bottom: 115px;
+    margin-bottom: 30px;
   }
 }
 @media only screen and (min-width: 750px) {
   .experience__title {
     font-size: 20px;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
   }
   .experience__job {
-    margin-bottom: 130px;
+    margin-bottom: 40px;
   }
 }
 </style>

@@ -38,13 +38,13 @@ export default {
 <style>
 .nav {
   position:fixed;
+  z-index: 9999;
   display: none;
   background-color: #181818;
 	top: 0px;
   left: 0px;
   width: 100%;
-	height: 75px; 
-  padding: 30px;
+	height: 65px; 
 }
 .nav__container {
   display: flex;
@@ -74,13 +74,12 @@ export default {
 }
 @media only screen and (min-width: 550px) {
   .nav__list {
-    font-size: 18px;
+    font-size: 16px;
     width: 550px;
   }
 }
 @media only screen and (min-width: 750px) {
   .nav__list {
-    font-size: 20px;
     width: 700px;
   }
 }

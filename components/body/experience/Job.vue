@@ -1,30 +1,40 @@
 <template>
   <div class="job">
-    <h3 class="job__role">{{ role }}</h3>
-    <div class="job__skills-container">
-      <h4 
-        class="job__skills" 
-        v-for="(skill, index) in skills" 
-        :key="index">
-        {{ skill }}
-        <span 
-          class="job__hyphen" 
-          v-if="index !== skills.length - 1">&nbsp;—&nbsp;</span>
-      </h4>
+    <div class="job__wrapper">
+      <h3 class="job__role">{{ role }}</h3>
+      <div class="job__skills-container">
+        <h4 
+          class="job__skills" 
+          v-for="(skill, index) in skills" 
+          :key="index">
+          {{ skill }}
+          <span 
+            class="job__hyphen" 
+            v-if="index !== skills.length - 1">&nbsp;—&nbsp;</span>
+        </h4>
+      </div>
+      <p class="job__dates">{{ dates }}</p>
+      <p class="job__company">at {{ company }}</p>
+      <div class="job__logo-container">
+        <img 
+          :src="logoUrl" 
+          :style="{ height: logoHeight + 'px' }" 
+          :alt="company">
+      </div>
     </div>
-    <p class="job__dates">{{ dates }}</p>
-    <p class="job__company">at {{ company }}</p>
-    <div class="job__logo-container">
-      <img 
-        :src="logoUrl" 
-        :style="{ height: logoHeight + 'px' }" 
-        :alt="company">
-    </div>
+    <overlay 
+      v-if="recommendation.text" 
+      class="job__overlay"/>
   </div>
 </template>
 
 <script>
+import Overlay from '~/components/global-components/Overlay.vue';
+
 export default {
+  components: {
+    Overlay
+  },
   props: {
     role: {
       type: String,
@@ -51,12 +61,21 @@ export default {
     logoHeight: {
       type: Number,
       default: 0
-    }
+    },
+    recommendation: {
+      type: Object,
+      default() {
+        return {};
+      }
+    },
   }
 }
 </script>
 
 <style>
+.job { 
+  padding: 40px 20px;
+}
 .job__role {
   font-size: 36px;
   color: #242424;
@@ -82,6 +101,10 @@ export default {
 }
 .job__logo-container {
   margin-top: 30px;
+}
+.job:hover > .job__overlay {
+  width: 100%;
+  left: 0;
 }
 @media only screen and (min-width: 550px) {
   .job__role {

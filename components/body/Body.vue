@@ -54,16 +54,16 @@ export default {
   width: 700px;
 }
 .body__about, .body__experience {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 @media only screen and (min-width: 550px) {
   .body__about, .body__experience {
-    margin-bottom: 150px;
+    margin-bottom: 80px;
   }
 }
 @media only screen and (min-width: 750px) {
   .body__about, .body__experience {
-    margin-bottom: 200px;
+    margin-bottom: 130px;
   }
 }
 </style>

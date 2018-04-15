@@ -15,27 +15,19 @@
         :skills="school.skills"
         :school="school.school"
         :logo-url="school.logoUrl"
-        :logo-height="school.logoHeight"/>
-      <recommendation 
-        class="education__recommendation"
-        v-if="school.recommendation"
-        :name="school.recommendation.name"
-        :title="school.recommendation.title"
-        :company="school.recommendation.company"
-        :profile-url="school.recommendation.profileUrl"
-        :recommendation="school.recommendation.recommendation"/>
+        :logo-height="school.logoHeight"
+        :recommendation="school.recommendation"
+      />
     </div>
   </div>
 </template>
 
 <script>
-import school from '~/components/body/education/School.vue';
-import recommendation from '~/components/body/recommendation/Recommendation.vue';
+import School from '~/components/body/education/School.vue';
 
 export default {
   components: {
-    school,
-    recommendation
+    School
   },
   data() {
     return {
@@ -57,7 +49,7 @@ export default {
             profileUrl: '/headshots/daniel-brito.jpg',
             title: 'Placements Manager',
             company: 'Ironhack',
-            recommendation: `Ryan is a person with an extremely strong work ethic and driving for 
+            text: `Ryan is a person with an extremely strong work ethic and driving for 
               results constantly. He sees and can address everything from the big picture to the details.`
           }
         },
@@ -90,7 +82,8 @@ export default {
   margin-bottom: 40px;
 }
 .education__school {
-  margin-bottom: 100px;
+  position: relative;
+  margin-bottom: 50px;
 }
 .education__school:last-of-type {
   margin-bottom: 0px;
@@ -104,7 +97,7 @@ export default {
     margin-bottom: 50px;
   }
   .education__school {
-    margin-bottom: 115px;
+    margin-bottom: 30px;
   }
   .education__recommendation {
     margin-top: 75px;
@@ -116,7 +109,7 @@ export default {
     margin-bottom: 60px;
   }
   .education__school {
-    margin-bottom: 130px;
+    margin-bottom: 40px;
   }
 }
 </style>
