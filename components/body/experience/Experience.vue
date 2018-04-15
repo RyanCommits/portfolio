@@ -6,7 +6,6 @@
       <span>&nbsp;—</span>
     </h2>
     <job 
-      class="experience__job"
       v-for="(job, index) in jobs" 
       :key="index"
       :role="job.role"
@@ -14,7 +13,8 @@
       :skills="job.skills"
       :company="job.company"
       :logo-url="job.logoUrl"
-      :logo-height="job.logoHeight"/>
+      :logo-height="job.logoHeight"
+      class="experience__job"/>
   </div>
 </template>
 

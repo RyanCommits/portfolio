@@ -4,13 +4,13 @@
       <h3 class="job__role">{{ role }}</h3>
       <div class="job__skills-container">
         <h4 
-          class="job__skills" 
           v-for="(skill, index) in skills" 
-          :key="index">
+          :key="index"
+          class="job__skills" >
           {{ skill }}
           <span 
-            class="job__hyphen" 
-            v-if="index !== skills.length - 1">&nbsp;—&nbsp;</span>
+            v-if="index !== skills.length - 1"
+            class="job__hyphen" >&nbsp;—&nbsp;</span>
         </h4>
       </div>
       <p class="job__dates">{{ dates }}</p>

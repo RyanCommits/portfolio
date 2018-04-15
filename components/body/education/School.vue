@@ -3,14 +3,14 @@
     <div class="school__wrapper">
       <h3 class="school__degree">{{ degree }}</h3>
       <div class="school__skills-container">
-        <h4 
-          class="school__skills" 
+        <h4  
           v-for="(skill, index) in skills" 
-          :key="index">
+          :key="index"
+          class="school__skills">
           {{ skill }}
           <span 
-            class="school__hyphen"
-            v-if="index !== skills.length - 1">&nbsp;—&nbsp;</span>
+            v-if="index !== skills.length - 1"
+            class="school__hyphen">&nbsp;—&nbsp;</span>
         </h4>
       </div>
       <p class="school__dates">{{ dates }}</p>
@@ -23,9 +23,9 @@
       </div>
     </div>
     <overlay 
-      class="school__overlay"
-      v-if="recommendation.text"
-      :recommendation="recommendation"/>
+      v-if="recommendation.summaryText"
+      :recommendation="recommendation"
+      class="school__overlay"/>
   </div>
 </template>
 

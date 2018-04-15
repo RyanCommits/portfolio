@@ -3,8 +3,8 @@
     <div class="header__table">
       <div class="header__container">
         <nav 
-          class="header__home" 
-          :class="{ header__visible: bodyIsVisible }">
+          :class="{ header__visible: bodyIsVisible }"
+          class="header__home">
           <ul class="header__nav">
             <li @click="scrollTo('body')">Home</li>
             <li @click="scrollTo('.about')">About</li>
@@ -23,8 +23,8 @@
           </h1>
         </transition>
         <p 
-          class="header__status" 
-          :class="{ header__visible: bodyIsVisible }">
+          :class="{ header__visible: bodyIsVisible }"
+          class="header__status">
           <a 
             href="mailto:qwang1993@gmail.com" 
             class="header__email">Available</a> to join a kickass front-end team.
@@ -33,8 +33,8 @@
         <nav>
           <transition name="header__fade">
             <ul 
-              class="header__list" 
-              :class="{ header__visible: bodyIsVisible }">
+              :class="{ header__visible: bodyIsVisible }"
+              class="header__list">
               <li class="header__link">
                 <a 
                   href="https://drive.google.com/file/d/1nfcKZEfaypODsss0iQf51SajuTgJf-QU/view?usp=sharing" 

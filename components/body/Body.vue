@@ -3,8 +3,8 @@
     <nav-bar/>
     <div class="body__container">
       <about 
-        class="body__about" 
-        :text="aboutText"/>
+        :text="aboutText"
+        class="body__about"/>
       <experience class="body__experience"/>
       <education/>
     </div>

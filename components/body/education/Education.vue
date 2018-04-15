@@ -6,7 +6,6 @@
       <span>&nbsp;—</span>
     </h2>
     <div 
-      class="education__school"
       v-for="(school, index) in schools" 
       :key="index">
       <school  
@@ -17,6 +16,7 @@
         :logo-url="school.logoUrl"
         :logo-height="school.logoHeight"
         :recommendation="school.recommendation"
+        class="education__school"
       />
     </div>
   </div>
@@ -49,8 +49,9 @@ export default {
             profileUrl: '/headshots/daniel-brito.jpg',
             title: 'Placements Manager',
             company: 'Ironhack',
-            text: `Ryan is a person with an extremely strong work ethic and driving for 
-              results constantly. He sees and can address everything from the big picture to the details.`
+            summaryText: `Ryan is a person with an extremely strong work ethic and driving for 
+              results constantly. He sees and can address everything from the big picture to the details.`,
+            fullText: `It truly was a pleasure having Ryan as one of our Web Development students here at Ironhack Miami. During his time here, he pushed himself further than any students I've ever seen and was a true workhorse. Ryan is a person with an extremely strong work ethic and driving for results constantly. Ryan is creative, energetic, solutions oriented and highly motivated with great communication skills. Ryan would be an extremely valuable asset to any team that he'd decide to be a part of. I truly wish that more of our students here at Ironhack would have the drive, resiliency, and level of commitment that Ryan possesses. I'm glad to call him a great friend and a motivating individual which I hold only the highest regard for. He's a very talented Software Engineer`
           }
         },
         {
