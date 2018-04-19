@@ -6,9 +6,9 @@
           :class="{ header__visible: bodyIsVisible }"
           class="header__home">
           <ul class="header__nav">
-            <li @click="scrollTo('.about')">About</li>
             <li @click="scrollTo('.experience')">Experience</li>
             <li @click="scrollTo('.education')">Education</li>
+            <li @click="scrollTo('.portfolio')">Portfolio</li>
             <li @click="scrollTo('.awards')">Awards</li>
           </ul>
         </nav>
@@ -135,7 +135,7 @@ export default {
   vertical-align: middle;
 }
 .header__home {
-  font-size: 16px;
+  font-size: 14px;
   opacity: 0;
   color: #6d6d6d;
   transform: translateY(-45px);

@@ -7,6 +7,7 @@
         class="body__about"/>
       <experience class="body__experience"/>
       <education class="body__education"/>
+      <portfolio class="body__portfolio"/>
       <awards/>
     </div>
   </div>
@@ -18,6 +19,7 @@ import About from '~/components/body/about/About.vue';
 import Experience from '~/components/body/experience/Experience.vue';
 import Education from '~/components/body/education/Education.vue';
 import Awards from '~/components/body/awards/Awards.vue';
+import Portfolio from '~/components/body/portfolio/Portfolio.vue';
 
 export default {
   components: {
@@ -25,7 +27,8 @@ export default {
     About,
     Experience,
     Education,
-    Awards
+    Awards,
+    Portfolio
   },
   data() {
     return {
@@ -55,16 +58,16 @@ export default {
   flex-direction: column;
   width: 700px;
 }
-.body__about, .body__experience, .body__education {
+.body__about, .body__experience, .body__education, .body__portfolio {
   margin-bottom: 30px;
 }
 @media only screen and (min-width: 550px) {
-  .body__about, .body__experience, .body__education {
+  .body__about, .body__experience, .body__education, .body__portfolio {
     margin-bottom: 60px;
   }
 }
 @media only screen and (min-width: 750px) {
-  .body__about, .body__experience, .body__education {
+  .body__about, .body__experience, .body__education, .body__portfolio {
     margin-bottom: 100px;
   }
 }

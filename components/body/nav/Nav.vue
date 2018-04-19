@@ -3,9 +3,9 @@
     <div class="nav__container">
       <ul class="nav__list">
         <li @click="scrollTo('body')">Home</li>
-        <li @click="scrollTo('.about')">About</li>
         <li @click="scrollTo('.experience')">Experience</li>
         <li @click="scrollTo('.education')">Education</li>
+        <li @click="scrollTo('.portfolio')">Portfolio</li>
         <li @click="scrollTo('.awards')">Awards</li>
       </ul>
     </div>
