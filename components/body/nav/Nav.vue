@@ -27,7 +27,6 @@ export default {
   },
   methods: {
     scrollTo(location) {
-      console.log($(location).offset())
       $('html, body').animate({
         scrollTop: $(location).offset().top - 150
       }, 1000)

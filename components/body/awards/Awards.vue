@@ -42,7 +42,7 @@ export default {
         },
         {
           award: 'Finalist - Best Use of AWS',
-          date: 'Decembery 2, 2017',
+          date: 'December 2, 2017',
           skills: [
             'Vue.js', 
             'Firebase',
@@ -54,7 +54,7 @@ export default {
         },
         {
           award: '2nd Place - $800',
-          date: 'Decembery 2, 2017',
+          date: 'September 29, 2017',
           skills: [
             'React/Redux', 
             'Node.js',

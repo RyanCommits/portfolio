@@ -14,11 +14,11 @@
         </nav>
         <transition 
           name="header__fade" 
-          @after-enter="titleTransition">
+          @after-enter="titleTransition(0)">
           <h1 
             v-if="titleIsVisible" 
             class="header__title">
-            <span >Ryan Wang </span>
+            <span @click="erase">Ryan Wang </span>
             <span class="header__variable-title">{{ statusText }}</span>
           </h1>
         </transition>
@@ -68,8 +68,9 @@ export default {
   data() {
     return {
       character: 0,
+      statusIndex: 0,
       statusText: '',
-      status: 'is a front-end web developer.',
+      status: ['is a front-end web developer.', 'will level up your website.', 'lives & works in South Florida.', 'will beat you at connect four.', 'uses React, Vue, & Angular.', 'loves full stack development.', 'enjoys & teaches public speaking.', 'is learning something new.'],
       typeSpeed: 50,
       titleIsVisible: false,
       bodyIsVisible: false
@@ -79,24 +80,39 @@ export default {
     this.titleIsVisible = true;
   },
   methods: {
-    typer(i) {
+    typer(i, index) {
       setTimeout(() => {
-        this.statusText += this.status.charAt(i);
+        this.statusText += this.status[index].charAt(i);
 
         // show body when title finished typing
-        this.bodyIsVisible = i === this.status.length - 1 ? true : false;
-      }, this.typeSpeed*i)
+        if (i === this.status[index].length - 1) {
+          this.bodyIsVisible = true;
+          setTimeout(() => {
+            this.erase();
+          }, 3500);
+        } 
+        return;
+      }, this.typeSpeed*i);
     },
-    titleTransition() {
-    //  start typing
-      for (let i = 0; i < this.status.length; i++) {
-        this.typer(i);
+    titleTransition(index) {
+      for (let i = 0; i < this.status[index].length; i++) {
+        this.typer(i, index);
       }
     },
     scrollTo(location) {
       $('html, body').animate({
         scrollTop: $(location).offset().top - 150
-      }, 1000)
+      }, 1000);
+    },
+    erase() {
+      this.statusText = this.statusText.substr(0, this.statusText.length - 1);
+
+      if (this.statusText.length > 0) {
+        setTimeout(this.erase, 50);
+      } else {
+        this.statusIndex = this.statusIndex + 1 >= this.status.length ? 0 : this.statusIndex + 1;
+        setTimeout(() => this.titleTransition(this.statusIndex), 200);
+      }
     }
   }
 }
