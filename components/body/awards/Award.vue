@@ -22,11 +22,19 @@
           :alt="award">
       </div>
     </div>
+    <award-overlay 
+      :pictures="pictures"
+      class="award__overlay"/>
   </div>
 </template>
 
 <script>
+import AwardOverlay from '~/components/global-components/AwardOverlay.vue';
+
 export default {
+  components: {
+    AwardOverlay
+  },
   props: {
     award: {
       type: String,
@@ -37,6 +45,12 @@ export default {
       default: ''
     },
     skills: {
+      type: Array,
+      default() {
+        return [];
+      }
+    },
+    pictures: {
       type: Array,
       default() {
         return [];

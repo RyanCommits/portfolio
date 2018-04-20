@@ -14,6 +14,7 @@
       :event="award.event"
       :logo-url="award.logoUrl"
       :logo-height="award.logoHeight"
+      :pictures="award.pictures"
       class="awards__award"/>
   </div>
 </template>
@@ -38,7 +39,12 @@ export default {
           ],
           event: 'Palm Beach Hackathon',
           logoUrl: '/logos/palmbeachtech.png',
-          logoHeight: 60
+          logoHeight: 60,
+          pictures: [
+            '/award-images/palm-beach.jpg',
+            '/award-images/palm-beach2.jpg',
+            '/award-images/palm-beach3.jpg'
+          ]
         },
         {
           award: 'Finalist - Best Use of AWS',
@@ -50,7 +56,11 @@ export default {
           ],
           event: 'University of Miami Hackathon',
           logoUrl: '/logos/uhack.png',
-          logoHeight: 100
+          logoHeight: 100,
+          pictures: [
+            '/award-images/uhack.jpg',
+            '/award-images/uhack2.jpg'
+          ]
         },
         {
           award: '2nd Place - $800',
@@ -62,7 +72,11 @@ export default {
           ],
           event: 'Florida International University Hackathon',
           logoUrl: '/logos/shellhacks.png',
-          logoHeight: 110
+          logoHeight: 110,
+          pictures: [
+            '/award-images/shellhacks.jpg',
+            '/award-images/shellhacks2.jpg'
+          ]
         }
       ]
     }
