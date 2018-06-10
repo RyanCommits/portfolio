@@ -1,19 +1,19 @@
 <template>
   <div class="overlay">
-    <transition 
-      name="fade" 
+    <transition
+      name="fade"
       mode="out-in">
-      <div 
-        v-if="!expandRecommendation" 
+      <div
+        v-if="!expandRecommendation"
         key="summary"
         class="overlay__wrapper">
         <div class="overlay__author">
-          <a 
+          <a
+            :href="recommendation.linkedIn"
             class="overlay__linkedin"
-            href="https://www.linkedin.com/in/dbrito1/"
             target="_blank">
-            <img 
-              :src="recommendation.profileUrl" 
+            <img
+              :src="recommendation.profileUrl"
               class="overlay__profile"
               alt="daniel brito">
             <h4 class="overlay__name">{{ recommendation.name }}</h4>
@@ -25,12 +25,12 @@
           <p class="overlay__recommendation">
             {{ recommendation.summaryText }}
           </p>
-          <p 
-            class="overlay__more" 
+          <p
+            class="overlay__more"
             @click="toggleFullRecommendation">Read More ></p>
         </div>
       </div>
-      <div  
+      <div
         v-else-if="expandRecommendation"
         key="full"
         class="overlay__wrapper">
@@ -38,8 +38,8 @@
           <p class="overlay__recommendation">
             {{ recommendation.fullText }}
           </p>
-          <p 
-            class="overlay__more" 
+          <p
+            class="overlay__more"
             @click="toggleFullRecommendation">Read Less ></p>
         </div>
       </div>

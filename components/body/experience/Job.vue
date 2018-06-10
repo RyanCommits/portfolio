@@ -3,12 +3,12 @@
     <div class="job__wrapper">
       <h3 class="job__role">{{ role }}</h3>
       <div class="job__skills-container">
-        <h4 
-          v-for="(skill, index) in skills" 
+        <h4
+          v-for="(skill, index) in skills"
           :key="index"
           class="job__skills" >
           {{ skill }}
-          <span 
+          <span
             v-if="index !== skills.length - 1"
             class="job__hyphen" >&nbsp;—&nbsp;</span>
         </h4>
@@ -16,14 +16,15 @@
       <p class="job__dates">{{ dates }}</p>
       <p class="job__company">at {{ company }}</p>
       <div class="job__logo-container">
-        <img 
-          :src="logoUrl" 
-          :style="{ height: logoHeight + 'px' }" 
+        <img
+          :src="logoUrl"
+          :style="{ height: logoHeight + 'px' }"
           :alt="company">
       </div>
     </div>
-    <overlay 
-      v-if="recommendation.text" 
+    <overlay
+      v-if="recommendation.company"
+      :recommendation="recommendation"
       class="job__overlay"/>
   </div>
 </template>
@@ -73,7 +74,7 @@ export default {
 </script>
 
 <style>
-.job { 
+.job {
   padding: 40px 20px;
 }
 .job__role {

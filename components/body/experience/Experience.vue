@@ -5,8 +5,8 @@
       EXPERIENCE
       <span>&nbsp;—</span>
     </h2>
-    <job 
-      v-for="(job, index) in jobs" 
+    <job
+      v-for="(job, index) in jobs"
       :key="index"
       :role="job.role"
       :dates="job.dates"
@@ -14,6 +14,7 @@
       :company="job.company"
       :logo-url="job.logoUrl"
       :logo-height="job.logoHeight"
+      :recommendation="job.recommendation"
       class="experience__job"/>
   </div>
 </template>
@@ -32,14 +33,30 @@ export default {
           role: 'Software Developer',
           dates: 'February 2018 - Present',
           skills: [
-            'React/Redux', 
+            'React/Redux',
             'Laravel',
             'MySQL'
           ],
           company: 'Nebular Agency',
           logoUrl: '/logos/nebular-logo.png',
           logoHeight: 110,
-          recommendation: {}
+          recommendation: {
+            name: 'Gregory Perlman',
+            profileUrl: '/headshots/greg-perlman.jpg',
+            title: 'Software Engineer',
+            company: 'Nebular',
+            linkedIn: 'https://www.linkedin.com/in/gregperlman/',
+            summaryText: 'I had the great pleasure of working with Ryan. He is an extremely ' +
+            'meticulous developer; a person who derives decisions from very logical and critical thinking.',
+            fullText: 'I had the great pleasure of working with Ryan. He is an extremely meticulous developer; ' +
+            'a person who derives decisions from very logical and critical thinking. ' +
+            'Ryan was able to come into the workplace and garner full knowledge of our techincal stack, paradigms, ' +
+            'and design patterns in no time. He knows when to ask the right questions and is a good listener. ' +
+            'He has a unique ability to think about certain challenges or problems in a different way. Thus, ' +
+            'I\'ve also been able to learn a lot from both him and his work. ' +
+            'Ryan\'s acumen for software development is excellent. He brings a distinct energy and is always ' +
+            'looking to improve. Ryan can, without a doubt, play an important role on any engineering team.'
+          }
         },
         {
           role: 'Front-end Web Developer',
@@ -84,7 +101,7 @@ export default {
           role: 'Program Coordinator',
           dates: 'September 2015 to December 2016',
           skills: [
-            'Web Design', 
+            'Web Design',
             'Adobe Create Cloud',
             'Event Management'
           ],

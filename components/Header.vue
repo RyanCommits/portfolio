@@ -2,7 +2,7 @@
   <div class="header">
     <div class="header__table">
       <div class="header__container">
-        <nav 
+        <nav
           :class="{ header__visible: bodyIsVisible }"
           class="header__home">
           <ul class="header__nav">
@@ -12,37 +12,37 @@
             <li @click="scrollTo('.awards')">Awards</li>
           </ul>
         </nav>
-        <transition 
-          name="header__fade" 
+        <transition
+          name="header__fade"
           @after-enter="titleTransition(0)">
-          <h1 
-            v-if="titleIsVisible" 
+          <h1
+            v-if="titleIsVisible"
             class="header__title">
             <span @click="erase">Ryan Wang </span>
             <span class="header__variable-title">{{ statusText }}</span>
           </h1>
         </transition>
-        <p 
+        <p
           :class="{ header__visible: bodyIsVisible }"
           class="header__status">
-          <a 
-            href="mailto:qwang1993@gmail.com" 
-            class="header__email">Available</a> to join a kickass front-end team.
+          <a
+            href="mailto:qwang1993@gmail.com"
+            class="header__email">Available</a> for freelance opportunities.
         </p>
 
         <nav>
           <transition name="header__fade">
-            <ul 
+            <ul
               :class="{ header__visible: bodyIsVisible }"
               class="header__list">
               <li class="header__link">
-                <a 
-                  href="https://drive.google.com/file/d/1C_F-XcJ9Ha5Cu_5ptgaUuyqeG5KyEj78/view?usp=sharing" 
+                <a
+                  href="https://drive.google.com/file/d/1C_F-XcJ9Ha5Cu_5ptgaUuyqeG5KyEj78/view?usp=sharing"
                   target="_blank">Resume</a>
               </li>
               <li class="header__link">
-                <a 
-                  href="https://medium.com/@ryancommits" 
+                <a
+                  href="https://medium.com/@ryancommits"
                   target="_blank">Medium</a>
               </li>
               <li class="header__link">
@@ -51,8 +51,8 @@
                   target="_blank">Github</a>
               </li>
               <li class="header__link">
-                <a 
-                  href="https://www.linkedin.com/in/ryancommits/" 
+                <a
+                  href="https://www.linkedin.com/in/ryancommits/"
                   target="_blank">LinkedIn</a>
               </li>
             </ul>
@@ -90,7 +90,7 @@ export default {
           setTimeout(() => {
             this.erase();
           }, 3500);
-        } 
+        }
         return;
       }, this.typeSpeed*i);
     },
