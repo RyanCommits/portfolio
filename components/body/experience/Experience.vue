@@ -30,8 +30,21 @@ export default {
     return {
       jobs: [
         {
-          role: 'Software Developer',
-          dates: 'February 2018 - Present',
+          role: 'Software Engineer',
+          dates: 'May 2018 - Present',
+          company: 'FlexShopper',
+          skills: [
+            'React Native',
+            'Flow',
+            'Jira'
+          ],
+          logoUrl: '/logos/flexshopper.png',
+          logoHeight: 50,
+          recommendation: {}
+        },
+        {
+          role: 'Software Engineer',
+          dates: 'February 2018 - May 2018',
           skills: [
             'React/Redux',
             'Laravel',
