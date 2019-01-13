@@ -36,7 +36,7 @@ export default {
           skills: [
             'React Native',
             'Flow',
-            'Jira'
+            'Node'
           ],
           logoUrl: '/logos/flexshopper.png',
           logoHeight: 50,
@@ -84,45 +84,6 @@ export default {
           logoHeight: 110,
           recommendation: {}
         },
-        {
-          role: 'Founder',
-          dates: 'November 2016 - August 2017',
-          company: 'SpeakUP! Miami',
-          skills: [
-            'Public Speaking',
-            'Effective Communication',
-            'Event Management'
-          ],
-          logoUrl: '/logos/speakup.png',
-          logoHeight: 110,
-          recommendation: {}
-        },
-        {
-          role: 'Inside Sales Specialist',
-          dates: 'November 2016 - May 2017',
-          skills: [
-            'Cold Calling',
-            'Sales Writing',
-            'Product Demonstration'
-          ],
-          company: 'HealthSnap Solutions',
-          logoUrl: '/logos/healthsnap.png',
-          logoHeight: 60,
-          recommendation: {}
-        },
-        {
-          role: 'Program Coordinator',
-          dates: 'September 2015 to December 2016',
-          skills: [
-            'Web Design',
-            'Adobe Create Cloud',
-            'Event Management'
-          ],
-          company: 'University of Miami, Miller School of Medicine',
-          logoUrl: '/logos/university.png',
-          logoHeight: 60,
-          recommendation: {}
-        }
       ]
     }
   }

@@ -6,7 +6,7 @@
       <span>&nbsp;—</span>
     </h2>
     <project
-      v-for="(project, index) in projects" 
+      v-for="(project, index) in projects"
       :key="index"
       :project="project.project"
       :skills="project.skills"
@@ -30,7 +30,7 @@ export default {
         {
           project: 'Minute Coder',
           skills: [
-            'Vue.js', 
+            'Vue.js',
             'Firebase',
             'AWS'
           ],
@@ -41,13 +41,13 @@ export default {
         {
           project: 'Clarity',
           skills: [
-            'Angular 4', 
+            'Angular 4',
             'Node.js',
             'MongoDB'
           ],
           logoUrl: '/projects/Clarity.jpg',
           description: 'A morning journal to level up your day',
-          link: 'http://www.dailyclarity.co/register'
+          link: 'https://dailyclarity.herokuapp.com/register'
         },
         {
           project: 'Stack',
