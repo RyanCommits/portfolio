@@ -37,7 +37,7 @@
               class="header__list">
               <li class="header__link">
                 <a
-                  href="https://drive.google.com/file/d/1C_F-XcJ9Ha5Cu_5ptgaUuyqeG5KyEj78/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1s0FlKIS2QslQp3wpu9T6FkoAn9HkXcQ4/view?usp=sharing"
                   target="_blank">Resume</a>
               </li>
               <li class="header__link">
