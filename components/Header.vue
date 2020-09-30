@@ -27,7 +27,7 @@
           class="header__status">
           <a
             href="mailto:qwang1993@gmail.com"
-            class="header__email">Available</a> for freelance opportunities.
+            class="header__email">Available</a> for coffee and beers.
         </p>
 
         <nav>
@@ -37,7 +37,7 @@
               class="header__list">
               <li class="header__link">
                 <a
-                  href="https://drive.google.com/file/d/1s0FlKIS2QslQp3wpu9T6FkoAn9HkXcQ4/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1NSwLeURFgrQFNy1aCNf5cqshAY-XJQQh/view?usp=sharing"
                   target="_blank">Resume</a>
               </li>
               <li class="header__link">
@@ -70,7 +70,7 @@ export default {
       character: 0,
       statusIndex: 0,
       statusText: '',
-      status: ['is a front-end web developer.', 'will level up your website.', 'lives & works in South Florida.', 'will beat you at connect four.', 'uses React, Vue, & Angular.', 'loves full stack development.', 'enjoys & teaches public speaking.', 'is learning something new.'],
+      status: ['is a front-end React specialist.', 'loves React Native & Mobile.', 'lives & works in Orlando, Florida.', 'will beat you at connect four.', 'writes documentation and tests.', 'loves full stack development.', 'enjoys & teaches public speaking.', 'is learning something new.'],
       typeSpeed: 50,
       titleIsVisible: false,
       bodyIsVisible: false

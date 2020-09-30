@@ -30,12 +30,21 @@ export default {
     return {
       jobs: [
         {
+          role: 'Software Engineering Consultant',
+          dates: 'September 2019 - Present',
+          company: 'Slalom',
+          skills: ['React Native'],
+          logoUrl: '/logos/slalom.png',
+          logoHeight: 50,
+          recommendation: {}
+        },
+        {
           role: 'Software Engineer',
-          dates: 'May 2018 - Present',
+          dates: 'May 2018 - September 2019',
           company: 'FlexShopper',
           skills: [
             'React Native',
-            'Flow',
+            'TypeScript',
             'Node'
           ],
           logoUrl: '/logos/flexshopper.png',

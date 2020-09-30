@@ -32,8 +32,8 @@ export default {
   },
   data() {
     return {
-      aboutText: 'I\'m a Front-end Web Specialist developing myself into a Full-Stack Engineer.\
-                  You\'ll find me building modern web applications with the latest JavaScript technologies.'
+      aboutText: 'I\'m a Front-end Web developer with extensive experience in all stages of the software development lifecycle\
+                  working in fast-paced, small-medium sized teams. Proficient with cutting edge frontend tech and libraries.'
     }
   }
 }
