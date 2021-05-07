@@ -15,6 +15,14 @@
       <h4 class="recommendation__name">{{ name }}</h4>
       <p class="recommendation__title">{{ title }}</p>
       <p class="recommendation__company">{{ company }}</p>
+      <a
+        :href="profileUrl"
+        target="_blank">
+        <img
+          class="recommendation__linkedin"
+          src="/icons/linkedin-icon.png" 
+          alt="linkedIn">
+      </a>
     </div>
   </div>
 </template>
@@ -90,6 +98,10 @@ export default {
 .recommendation__company {
   font-size: 15px;
 }
+.recommendation__linkedin {
+  margin-top: 6px;
+  height: 18px;
+}
 @media only screen and (min-width: 600px) {
   .recommendation__image {
     float: left;
@@ -106,10 +118,18 @@ export default {
   .recommendation__company {
     font-size: 17px;
   }
+  .recommendation__linkedin {
+    margin-top: 8px;
+    height: 22px;
+  }
 }
 @media only screen and (min-width: 750px) {
   .recommendation__text {
     font-size: 20px;
+  }
+  .recommendation__linkedin {
+    margin-top: 10px;
+    height: 26px;
   }
 }
 </style>
