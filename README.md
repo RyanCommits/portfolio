@@ -19,4 +19,7 @@ $ npm start
 $ npm run generate
 ```
 
+# deploy to github pages
+$ npm run deploy
+
 For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
