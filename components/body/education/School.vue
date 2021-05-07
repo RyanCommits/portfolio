@@ -22,20 +22,12 @@
           :alt="school">
       </div>
     </div>
-    <overlay 
-      v-if="recommendation.summaryText"
-      :recommendation="recommendation"
-      class="school__overlay"/>
   </div>
 </template>
 
 <script>
-import Overlay from '~/components/global-components/Overlay.vue';
 
 export default {
-  components: {
-    Overlay
-  },
   props: {
     degree: {
       type: String,
@@ -102,10 +94,6 @@ export default {
 }
 .school__logo-container {
   margin-top: 30px;
-}
-.school:hover > .school__overlay {
-  width: 100%;
-  left: 0;
 }
 @media only screen and (min-width: 550px) {
   .school__degree {

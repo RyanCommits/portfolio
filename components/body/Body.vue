@@ -6,9 +6,8 @@
         :text="aboutText"
         class="body__about"/>
       <experience class="body__experience"/>
+      <recommendations class="body__recommendations"/>
       <education class="body__education"/>
-      <portfolio class="body__portfolio"/>
-      <awards/>
     </div>
   </div>
 </template>
@@ -18,8 +17,7 @@ import NavBar from '~/components/body/nav/Nav.vue';
 import About from '~/components/body/about/About.vue';
 import Experience from '~/components/body/experience/Experience.vue';
 import Education from '~/components/body/education/Education.vue';
-import Awards from '~/components/body/awards/Awards.vue';
-import Portfolio from '~/components/body/portfolio/Portfolio.vue';
+import Recommendations from '~/components/body/recommendations/Recommendations.vue';
 
 export default {
   components: {
@@ -27,8 +25,7 @@ export default {
     About,
     Experience,
     Education,
-    Awards,
-    Portfolio
+    Recommendations,
   },
   data() {
     return {
@@ -40,7 +37,7 @@ export default {
 </script>
 
 <style>
-.body{
+.body {
   position: relative;
   z-index: 1;
   top: -60px;
@@ -51,24 +48,30 @@ export default {
   display: -webkit-flex;     
   justify-content: center;
   background-color: #ebebeb;
-  padding: 140px;
+  padding: 40px;
 }
 .body__container {
   display: flex;
   flex-direction: column;
   width: 700px;
 }
-.body__about, .body__experience, .body__education, .body__portfolio {
+.body__about, .body__experience, .body__recommendations {
   margin-bottom: 30px;
 }
 @media only screen and (min-width: 550px) {
-  .body__about, .body__experience, .body__education, .body__portfolio {
+  .body__about, .body__experience, .body__recommendations {
     margin-bottom: 60px;
+  }
+   .body {
+    padding: 70px;
   }
 }
 @media only screen and (min-width: 750px) {
-  .body__about, .body__experience, .body__education, .body__portfolio {
+  .body__about, .body__experience, .body__recommendations {
     margin-bottom: 100px;
+  }
+  .body {
+    padding: 140px;
   }
 }
 </style>

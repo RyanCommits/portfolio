@@ -22,20 +22,12 @@
           :alt="company">
       </div>
     </div>
-    <overlay
-      v-if="recommendation.company"
-      :recommendation="recommendation"
-      class="job__overlay"/>
   </div>
 </template>
 
 <script>
-import Overlay from '~/components/global-components/Overlay.vue';
 
 export default {
-  components: {
-    Overlay
-  },
   props: {
     role: {
       type: String,
@@ -102,10 +94,6 @@ export default {
 }
 .job__logo-container {
   margin-top: 30px;
-}
-.job:hover > .job__overlay {
-  width: 100%;
-  left: 0;
 }
 @media only screen and (min-width: 550px) {
   .job__role {
