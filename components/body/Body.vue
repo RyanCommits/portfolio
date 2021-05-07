@@ -48,7 +48,7 @@ export default {
   display: -webkit-flex;     
   justify-content: center;
   background-color: #ebebeb;
-  padding: 40px;
+  padding: 70px 40px;
 }
 .body__container {
   display: flex;

@@ -81,11 +81,10 @@ export default {
   letter-spacing: 1px;
   font-size: 18px;
   color: #999999;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 .recommendations__container {
   position: relative;
-  margin-bottom: 50px;
 }
 .recommendations__container:last-of-type {
   margin-bottom: 0px;
@@ -93,10 +92,10 @@ export default {
 @media only screen and (min-width: 550px) {
   .recommendations__title {
     font-size: 19px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
   .recommendations__container {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 }
 @media only screen and (min-width: 750px) {

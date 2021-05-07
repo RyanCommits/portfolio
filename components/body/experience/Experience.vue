@@ -86,11 +86,10 @@ export default {
   letter-spacing: 1px;
   font-size: 18px;
   color: #999999;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 .experience__job {
   position: relative;
-  margin-bottom: 50px;
 }
 .experience__job:last-of-type {
   margin-bottom: 0px;
@@ -98,10 +97,10 @@ export default {
 @media only screen and (min-width: 550px) {
   .experience__title {
     font-size: 19px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
   .experience__job {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 }
 @media only screen and (min-width: 750px) {

@@ -31,17 +31,18 @@ export default {
   letter-spacing: 1px;
   font-size: 18px;
   color: #999999;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 .about__body {
   color: #333333;
   font-size: 16px;
   line-height: 36px;
+  padding: 20px;
 }
 @media only screen and (min-width: 550px) {
   .about__title {
     font-size: 19px;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
   }
   .about__body {
     font-size: 24px;
@@ -51,7 +52,7 @@ export default {
 @media only screen and (min-width: 750px) {
   .about__title {
     font-size: 20px;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
   }
   .about__body {
     font-size: 30px;

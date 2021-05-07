@@ -71,7 +71,6 @@ export default {
   -webkit-transition:.5s;
   transition:.5s;
   cursor: pointer;
-  margin-right: 30px;
   margin-bottom: 20px;
 }
 .recommendation__image:hover {
@@ -105,6 +104,8 @@ export default {
 @media only screen and (min-width: 600px) {
   .recommendation__image {
     float: left;
+    margin-right: 30px;
+    margin-bottom: 20px;
   }
   .recommendation__text {
     font-size: 18px;
